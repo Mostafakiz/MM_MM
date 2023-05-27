@@ -6,6 +6,9 @@ class BaseModel{
         $db=new Connection();
         $this->connection=$db->getConnection();
     }
+    public function ass(){
+        return 0;
+    }
     public function all($table_name,$args){
         $query='SELECT '.$args.' FROM '.$table_name;
         $res=$this->connection->query($query);
